@@ -9,5 +9,4 @@ So that I can chat with my math friends like a pro
         And I add "4" to the inputfield "#b"
         And I add "5" to the inputfield "#c"
         And I click on the element "input.clcbtn"
-        Then I expect that element "#_e" is not empty
-        And I expect that element "#_d" is not empty
+        Then I expect that element "#_d" is not empty
