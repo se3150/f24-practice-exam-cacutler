@@ -23,3 +23,5 @@ Create a functional test suite using **Python**, **behave**, **behave-webdriver*
 Configure a continuous integration workflow that automates test runners for the two test suites above using GitHub Actions.
 
 Create a single workflow that includes one job for each of the two test runners.
+
+When finished, demonstrate your exam progress to the instructor via the GitHub Actions web interface. Show the test runner output for each of the two jobs. 
