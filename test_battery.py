@@ -31,10 +31,30 @@ def describe_Battery():
             assert not return_value
         def it_does_not_exceed_capacity_on_recharge(partially_charged_battery):
             assert partially_charged_battery.getCharge() == 70
+            assert partially_charged_battery.getCapacity() == 100
             return_value = partially_charged_battery.recharge(31)
             assert partially_charged_battery.getCharge() != 101
             assert partially_charged_battery.getCharge() == 100
             assert return_value
     def describe_drain():
         # your test cases here
-        pass
+        def it_drains_with_a_positive_amount(charged_battery):
+            assert charged_battery.getCharge() == 100
+            return_value = charged_battery.drain(50)
+            assert charged_battery.getCharge() == 50
+            assert return_value
+        def it_does_not_drain_with_a_negative_amount(charged_battery):
+            assert charged_battery.getCharge() == 100
+            return_value = charged_battery.drain(-5)
+            assert charged_battery.getCharge() == 100
+            assert not return_value 
+        def it_does_not_drain_with_a_zero_amount(charged_battery):
+            assert charged_battery.getCharge() == 100
+            return_value = charged_battery.drain(0)
+            assert charged_battery.getCharge() == 100
+            assert not return_value
+        def it_does_not_drain_past_the_full_capacity(charged_battery):
+            assert charged_battery.getCharge() == 100
+            return_value = charged_battery.drain(101)
+            assert charged_battery.getCharge() == 0
+            assert return_value
