@@ -2,7 +2,7 @@
 
 This is the practice exam for SE3150. It is very close to the actual final exam and should give you a good idea about where you need to study or work to get your environment ready so that you can actually do the final on your computer.
 
-For this practice, you will write two test suites, a unit test suite and a functional test suite, then you will implement a CI workflow using github actions for both. Begin by using the code provided at the start of the this practice.
+For this practice, you will write two test suites, a **unit test suite** and a **functional test suite**, then you will implement a CI workflow using github actions for both. Begin by using the code provided at the start of the this practice.
 
 ## Part 1
 
