@@ -41,7 +41,6 @@ def describe_Battery():
             b.recharge(20)
             external_monitor_mock.notify_recharge.assert_called_once_with(90)
     def describe_drain():
-        # your test cases here
         def it_drains_with_a_positive_amount(charged_battery):
             assert charged_battery.getCharge() == 100
             return_value = charged_battery.drain(50)
