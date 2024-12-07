@@ -1,7 +1,6 @@
 import pytest
 from battery import Battery
 from unittest.mock import Mock
-todo = pytest.mark.skip(reason='todo: pending spec')
 @pytest.fixture
 def charged_battery():
     return Battery(100)
@@ -12,7 +11,6 @@ def partially_charged_battery():
     return b
 def describe_Battery():
     def describe_recharge():
-        # your test cases here
         def it_recharges_with_a_positive_amount(partially_charged_battery):
             assert partially_charged_battery.getCharge() == 70
             return_value = partially_charged_battery.recharge(20)
